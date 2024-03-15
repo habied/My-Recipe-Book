@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UB/z+5Z0rRxXZyYPmO0FnUN4iOg1i8rB9+NDwMJneTFWzpbBI5En33kvLLh2GJcgPZQWRAT6ZRL2TKXwf7SskQ==",
+  "success": true,
+  "projectFilePath": "D:\\Desktop\\Recipe Book\\RecipeBook.Core\\RecipeBook.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}

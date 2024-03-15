@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Desktop\\Recipe Book\\RecipeBookApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FDB5CC9A-65EA-42F9-8ABF-0A4C7BD13343}|RecipeBookApp.Web.csproj|d:\\desktop\\recipe book\\recipebookapp\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDB5CC9A-65EA-42F9-8ABF-0A4C7BD13343}|RecipeBookApp.Web.csproj|solutionrelative:controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBADE46F-2DF6-461D-A4FA-BA3749698A00}|..\\RecipeBook.EF\\RecipeBook.EF.csproj|d:\\desktop\\recipe book\\recipebook.ef\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E0C1B32-6254-4704-ACD0-48F187A8046B}|..\\RecipeBook.Core\\RecipeBook.Core.csproj|d:\\desktop\\recipe book\\recipebook.core\\dtos\\recipeingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E0C1B32-6254-4704-ACD0-48F187A8046B}|..\\RecipeBook.Core\\RecipeBook.Core.csproj|d:\\desktop\\recipe book\\recipebook.core\\dtos\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBADE46F-2DF6-461D-A4FA-BA3749698A00}|..\\RecipeBook.EF\\RecipeBook.EF.csproj|d:\\desktop\\recipe book\\recipebook.ef\\recipeuow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "D:\\Desktop\\Recipe Book\\RecipeBook.EF\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "..\\RecipeBook.EF\\Repositories\\BaseRepository.cs",
+              "ToolTip": "D:\\Desktop\\Recipe Book\\RecipeBook.EF\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "..\\RecipeBook.EF\\Repositories\\BaseRepository.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T20:13:34.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecipesController.cs",
+              "DocumentMoniker": "D:\\Desktop\\Recipe Book\\RecipeBookApp\\Controllers\\RecipesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecipesController.cs",
+              "ToolTip": "D:\\Desktop\\Recipe Book\\RecipeBookApp\\Controllers\\RecipesController.cs",
+              "RelativeToolTip": "Controllers\\RecipesController.cs",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAAKgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:56:25.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipeIngredientDTO.cs",
+              "DocumentMoniker": "D:\\Desktop\\Recipe Book\\RecipeBook.Core\\DTOs\\RecipeIngredientDTO.cs",
+              "RelativeDocumentMoniker": "..\\RecipeBook.Core\\DTOs\\RecipeIngredientDTO.cs",
+              "ToolTip": "D:\\Desktop\\Recipe Book\\RecipeBook.Core\\DTOs\\RecipeIngredientDTO.cs",
+              "RelativeToolTip": "..\\RecipeBook.Core\\DTOs\\RecipeIngredientDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:56:13.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecipeUOW.cs",
+              "DocumentMoniker": "D:\\Desktop\\Recipe Book\\RecipeBook.EF\\RecipeUOW.cs",
+              "RelativeDocumentMoniker": "..\\RecipeBook.EF\\RecipeUOW.cs",
+              "ToolTip": "D:\\Desktop\\Recipe Book\\RecipeBook.EF\\RecipeUOW.cs",
+              "RelativeToolTip": "..\\RecipeBook.EF\\RecipeUOW.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAABUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:51:44.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecipeDTO.cs",
+              "DocumentMoniker": "D:\\Desktop\\Recipe Book\\RecipeBook.Core\\DTOs\\RecipeDTO.cs",
+              "RelativeDocumentMoniker": "..\\RecipeBook.Core\\DTOs\\RecipeDTO.cs",
+              "ToolTip": "D:\\Desktop\\Recipe Book\\RecipeBook.Core\\DTOs\\RecipeDTO.cs",
+              "RelativeToolTip": "..\\RecipeBook.Core\\DTOs\\RecipeDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:25:13.901Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

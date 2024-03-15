@@ -1,0 +1,17 @@
+D:\Desktop\Recipe Book\RecipeBook.EF\bin\Debug\net8.0\RecipeBook.EF.deps.json
+D:\Desktop\Recipe Book\RecipeBook.EF\bin\Debug\net8.0\RecipeBook.EF.runtimeconfig.json
+D:\Desktop\Recipe Book\RecipeBook.EF\bin\Debug\net8.0\RecipeBook.EF.dll
+D:\Desktop\Recipe Book\RecipeBook.EF\bin\Debug\net8.0\RecipeBook.EF.pdb
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.csproj.AssemblyReference.cache
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.AssemblyInfoInputs.cache
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.AssemblyInfo.cs
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.csproj.CoreCompileInputs.cache
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.dll
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\refint\RecipeBook.EF.dll
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.pdb
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBook.EF.genruntimeconfig.cache
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\ref\RecipeBook.EF.dll
+D:\Desktop\Recipe Book\RecipeBook.EF\bin\Debug\net8.0\RecipeBook.Core.dll
+D:\Desktop\Recipe Book\RecipeBook.EF\bin\Debug\net8.0\RecipeBook.Core.pdb
+D:\Desktop\Recipe Book\RecipeBook.EF\obj\Debug\net8.0\RecipeBo.5E1E09C3.Up2Date

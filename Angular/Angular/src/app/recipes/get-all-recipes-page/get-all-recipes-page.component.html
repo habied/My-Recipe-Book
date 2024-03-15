@@ -1,0 +1,86 @@
+<div class="container-xxl bg-white p-0">
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h5 class="section-title ff-secondary text-center text-primary fw-normal">
+          My Recipe Book
+        </h5>
+        <h1 class="mb-5">All Book Items</h1>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button
+          (click)="openCreate($event)"
+          class="btn btn-secondary bg-dark"
+        >
+          Add New Recipe
+        </button>
+      </div>
+      <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+        <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-3">
+          <li class="nav-item" *ngFor="let category of categories; let i = index">
+            <i class="fa fa-2x text-primary" [ngClass]="category.icon"></i>
+            <div class="ps-3">
+              <small class="text-body">{{ category.description }}</small>
+              <h6 class="mt-n1 mb-0">{{ category.text }}</h6>
+            </div>
+          </li>
+        </ul>
+        <div style="text-align: right; margin-bottom: 2rem"></div>
+        <div class="row g-4">
+          <ng-container *ngFor="let item of recipes">
+            <div class="d-flex align-items-center w-100">
+              <div class="d-flex flex-column text-start ps-4 w-100">
+                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                  <span style="color: var(--primary)">{{ item.name }}</span>
+                </h5>
+                <div>
+                  <button
+                    (click)="openModal($event, item)"
+                    style="background-color: transparent; border: none"
+                  >
+                    <i class="fas fa-trash text-danger"></i>
+                  </button>
+                  <button
+                    (click)="openEdit($event, item)"
+                    style="background-color: transparent; border: none"
+                  >
+                    <i class="fas fa-edit text-secondary"></i>
+                  </button>
+                  <button
+                    (click)="openDetails($event, item)"
+                    style="background-color: transparent; border: none"
+                  >
+                    <i class="fas fa-info-circle text-success"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Delete {{ deletedItem?.name }} ?
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Are you sure you want to delete {{ deletedItem?.name }} ?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary bg-dark close-btn" data-bs-dismiss="modal">
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary" (click)="deleteItem()">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

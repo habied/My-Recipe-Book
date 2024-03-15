@@ -1,0 +1,162 @@
+<div
+  class="container-xxl py-5 px-0 wow fadeInUp"
+  style="margin: 0 auto; max-width: 1200px"
+>
+  <div class="row g-0 justify-content-center">
+    <div class="col-md-10 d-flex align-items-center">
+      <div class="p-5 wow fadeInUp" style="width: 100%">
+        <h1
+          class="section-title ff-secondary text-start text-dark fw-normal"
+        >
+          Add Recipe
+        </h1>
+
+        <form
+          [formGroup]="createRecipeForm"
+          class="m-3"
+          (ngSubmit)="addRecipe($event)"
+        >
+          <div class="mb-3">
+            <label for="IName" class="form-label text-dark">Name</label>
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control"
+              id="IName"
+              [class.is-invalid]="name?.invalid"
+              [class.is-valid]="name?.valid"
+            />
+            <div class="invalid-feedback" *ngIf="name?.errors?.['required']">
+              Name is required
+            </div>
+            <div class="invalid-feedback" *ngIf="name?.errors?.['pattern']">
+              Name must be 3 letters at least,
+              <b>{{name?.errors?.['pattern'].actualValue}}</b> doesn't match.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="story" class="form-label text-dark">Instructions</label>
+            <textarea
+              id="story"
+              formControlName="instructions"
+              placeholder="Write recipe instructions here..."
+              class="form-control"
+              rows="5"
+            ></textarea>
+            <div
+              class="invalid-feedback"
+              *ngIf="instructions?.errors?.['pattern']"
+            >
+              Instructions should be more than 3 letters,
+              <b>{{instructions?.errors?.['pattern'].actualValue}}</b>
+              doesn't match.
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <label for="IName" class="form-label text-dark">Ingredient</label>
+              <input
+                type="text"
+                formControlName="ingredient"
+                class="form-control"
+                id="IName"
+                [class.is-invalid]="ingredient?.invalid"
+                [class.is-valid]="ingredient?.valid"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="ingredient?.errors?.['required']"
+              >
+                Ingredient is required
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="ingredient?.errors?.['pattern']"
+              >
+                Ingredient must be 3 letters at least,
+                <b>{{ingredient?.errors?.['pattern'].actualValue}}</b> doesn't
+                match.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="quantity" class="form-label text-dark">Quantity</label>
+              <input
+                type="text"
+                formControlName="quantity"
+                placeholder="Enter Quantity"
+                class="form-control"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="quantity?.errors?.['required']"
+              >
+                Quantity is required
+              </div>
+              <div class="invalid-feedback" *ngIf="quantity?.errors?.['min']">
+                Minimum value is 0,
+                <b>{{quantity?.errors?.['min'].actualValue}}</b> doesn't match.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="measuringUnit" class="form-label text-dark"
+                >Measuring Unit</label
+              >
+              <select class="form-select" formControlName="measuringUnit">
+                <option
+                  *ngFor="let unit of measuringUnits"
+                  [value]="unit.value"
+                >
+                  {{ unit.name }}
+                </option>
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <button
+                class="btn btn-success m-3"
+                type="button"
+                (click)="addIngredient()"
+              >
+                Add
+              </button>
+            </div>
+
+            <div class="m-3 col-md-12">
+              <h4 class="text-primary text-dark">Ingredients List</h4>
+              <div class="col-md-6">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <td colspan="3"></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ingredient of ingredientsList">
+                    <td>{{ ingredient.name }}</td>
+                    <td>{{ ingredient.quantity }}</td>
+                    <td>{{ getMeasuringUnitName(ingredient.measuringUnit)}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+
+          </div>
+
+          <button
+            [disabled]="name?.value === null || name?.value == '' || ingredientsList.length === 0"
+            type="submit"
+            class="btn btn-success"
+          >
+            Save
+          </button>
+          <button class="btn btn-primary m-3" type="button" (click)="onBack()">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

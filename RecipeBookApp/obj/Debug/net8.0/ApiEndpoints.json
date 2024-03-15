@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "RecipeRecipe.Web.Controllers.RecipesController",
+    "Method": "Create",
+    "RelativePath": "api/Recipes/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipe",
+        "Type": "RecipeBook.Core.DTOs.RecipeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeRecipe.Web.Controllers.RecipesController",
+    "Method": "Delete",
+    "RelativePath": "api/Recipes/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeRecipe.Web.Controllers.RecipesController",
+    "Method": "Edit",
+    "RelativePath": "api/Recipes/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipe",
+        "Type": "RecipeBook.Core.DTOs.RecipeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeRecipe.Web.Controllers.RecipesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Recipes/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeRecipe.Web.Controllers.RecipesController",
+    "Method": "GetById",
+    "RelativePath": "api/Recipes/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
