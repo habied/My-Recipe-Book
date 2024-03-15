@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
 using RecipeBook.Core.DTOs;
 using RecipeBook.Core.Entities;
 using RecipeBook.Core.Interfaces;
@@ -12,10 +13,12 @@ namespace RecipeRecipe.Web.Controllers
     {
         private readonly IRecipeUOW _unitOfWork;
 
-        public RecipesController(IRecipeUOW unitOfWork)
+        private readonly IValidator<RecipeDTO> _recipeValidator;
+
+        public RecipesController(IRecipeUOW unitOfWork, IValidator<RecipeDTO> recipeValidator)
         {
             _unitOfWork = unitOfWork;
-
+            _recipeValidator = recipeValidator;
         }
 
         [HttpGet("GetAll")]
@@ -71,10 +74,15 @@ namespace RecipeRecipe.Web.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody]RecipeDTO recipe, CancellationToken token)
+        public async Task<IActionResult> Create([FromBody] RecipeDTO recipe, CancellationToken token)
         {
             try
             {
+                var validationResult = await _recipeValidator.ValidateAsync(recipe, token);
+                if (!validationResult.IsValid)
+                {
+                    return BadRequest(validationResult.Errors);
+                }
                 var createdRecipe = await _unitOfWork.Recipes.AddAsync(MapDtoToEntity(recipe));
                 await _unitOfWork.Complete(token);
                 return Ok(createdRecipe.Id);
@@ -90,6 +98,11 @@ namespace RecipeRecipe.Web.Controllers
         {
             try
             {
+                var validationResult = await _recipeValidator.ValidateAsync(recipe, token);
+                if (!validationResult.IsValid)
+                {
+                    return BadRequest(validationResult.Errors);
+                }
                 var existingRecipe = await _unitOfWork.Recipes.GetByIdWithIncludesAsync(r => r.Id == recipe.Id, token, r => r.Ingredients);
 
                 if (existingRecipe == null)
@@ -102,12 +115,12 @@ namespace RecipeRecipe.Web.Controllers
 
                 _unitOfWork.Ingredients.DeleteRange(existingRecipe.Ingredients);
 
-               existingRecipe.Ingredients = recipe.Ingredients.Select(i => new RecipeIngredient
-               {
-                   Name = i.Name,
-                   Quantity = i.Quantity,
-                   MeasuringUnit = i.MeasuringUnit,
-               }).ToList();
+                existingRecipe.Ingredients = recipe.Ingredients.Select(i => new RecipeIngredient
+                {
+                    Name = i.Name,
+                    Quantity = i.Quantity,
+                    MeasuringUnit = i.MeasuringUnit,
+                }).ToList();
 
 
                 var updatedRecipe = _unitOfWork.Recipes.Update(existingRecipe);

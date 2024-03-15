@@ -1,6 +1,9 @@
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using RecipeBook.Core;
+using RecipeBook.Core.DTOs;
 using RecipeBook.Core.Interfaces;
+using RecipeBook.Core.Validators;
 using RecipeBook.EF;
 
 namespace RecipeBookApp
@@ -31,6 +34,8 @@ namespace RecipeBookApp
             b => b.MigrationsAssembly(typeof(RecipeBookDBContext).Assembly.FullName)));
 
             builder.Services.AddScoped<IRecipeUOW, RecipeUOW>();
+            builder.Services.AddTransient<IValidator<RecipeDTO>, RecipeDTOValidator>();
+            builder.Services.AddTransient<IValidator<RecipeIngredientDTO>, RecipeIngredientDTOValidator>();
 
             var app = builder.Build();
 
