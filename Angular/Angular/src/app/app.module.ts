@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { MatIconModule } from "@angular/material/icon";
-import { MatButtonModule } from "@angular/material/button";
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RecipeModule } from './recipes/recipe.module';
-
 import { RouterModule } from '@angular/router';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
-
+import { MaterialModule } from './materials/material.module';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    LogoutComponent,
   ],
   imports: [
     RouterModule,
@@ -31,14 +30,12 @@ import { ReactiveFormsModule } from "@angular/forms";
     MatDialogModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatIconModule,
     MatButtonModule,
-    RecipeModule
+    RecipeModule,
+    MaterialModule
   ],
-
-  providers: [
-    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
