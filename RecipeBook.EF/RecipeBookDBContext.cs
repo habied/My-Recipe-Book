@@ -20,6 +20,7 @@ namespace RecipeBook.EF
         }
 
         public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<RecipeIngredient> RecipeIngredients { get; set; }
 
     }

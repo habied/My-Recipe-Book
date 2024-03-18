@@ -5,7 +5,7 @@ using RecipeBook.Core.Entities;
 using RecipeBook.Core.Interfaces;
 using System.Text.RegularExpressions;
 
-namespace RecipeRecipe.Web.Controllers
+namespace RecipeBook.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -5,6 +5,7 @@ using RecipeBook.Core.DTOs;
 using RecipeBook.Core.Interfaces;
 using RecipeBook.Core.Validators;
 using RecipeBook.EF;
+using System.Configuration;
 
 namespace RecipeBookApp
 {
@@ -29,6 +30,8 @@ namespace RecipeBookApp
                     .AllowAnyMethod());
             });
 
+            builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
             builder.Services.AddDbContext<RecipeBookDBContext>(options =>
                             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
             b => b.MigrationsAssembly(typeof(RecipeBookDBContext).Assembly.FullName)));
@@ -39,7 +42,6 @@ namespace RecipeBookApp
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
